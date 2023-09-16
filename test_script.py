@@ -1,19 +1,24 @@
 """
-Test goes here
+Test for script.py goes here
 
 """
-from main import readfile, summary, median, histogram, scatter_age_blood_pressure
-import pandas as pd
-import matplotlib.pyplot as plt
+import os
+from script import (
+    summary,
+    median,
+    histogram,
+    scatter_age_blood_pressure,
+    create_output_directory,
+)
 
 # test cases
 
 
-def test_readfile():
-    file_path = "heart.csv"
-    data_csv = readfile(file_path)
-    assert isinstance(data_csv, pd.DataFrame)
-    assert not data_csv.empty
+def test_output_directory_exists():
+    expected_directory = "output"
+    create_output_directory(expected_directory)
+    # Assert: Check if the directory exists
+    assert os.path.exists(expected_directory)
 
 
 def test_summary():
@@ -47,8 +52,8 @@ def test_scatter_age_blood_pressure():
 
 
 if __name__ == "__main__":
-    test_readfile()
     test_summary()
     test_median()
     test_histogram()
     test_scatter_age_blood_pressure()
+    test_output_directory_exists()

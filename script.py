@@ -2,20 +2,15 @@
 Main code
 """
 import os
-import pandas as pd
 import matplotlib.pyplot as plt
-
-
-# read the Dataframe heart.csv.
-def readfile(a):
-    df = pd.read_csv(a)
-    return df
+from mylib.lib import readfile
 
 
 # generates summary statistics for the numeric columns in the DataFrame heart.csv.
 def summary(a):
     df = readfile(a)
     summary_stats = df.describe()
+    summary_stats.to_html("output/describe_summary.html", index=False)
     return summary_stats
 
 
@@ -23,11 +18,15 @@ def summary(a):
 def median(a):
     df = readfile(a)
     median_values = df.median()
+    median_df = median_values.to_frame()
+    median_df.reset_index(inplace=True)  # Reset the index to include it in the output
+    # Save the DataFrame to an HTML file
+    median_df.to_html("output/describe_median.html", index=False)
     return median_values
 
 
 # Generate histogram for each column in heart.csv
-def histogram(a):
+def histogram(a, output_dir="output"):
     df = readfile(a)
     columns = df.columns
 
@@ -38,13 +37,21 @@ def histogram(a):
         plt.ylabel("Frequency")
         plt.title(f"Histogram of {column}")
         plt.grid(True)
-        #plt.show()  # Display the histogram for the current column
+        # plt.show()  # Display the histogram for the current column
 
-        plt.savefig("output/histogram.png", format="png")
+        # Generate a unique filename for each histogram
+        output_path = os.path.join(output_dir, f"histogram_{column}.png")
+
+        # Save the histogram plot as an image
+        plt.savefig(output_path, format="png")
         plt.close()
 
 
-# Generate scatter plot for the 4th column(resting blood pressure) and the 1st column (age) in heart.csv
+# Generate scatter plot
+# for the 4th column(resting blood pressure)
+# and the 1st column (age) in heart.csv
+
+
 def scatter_age_blood_pressure(a):
     df = readfile(a)
     x = df.iloc[:, 0]  # 1st column (age)
@@ -55,16 +62,21 @@ def scatter_age_blood_pressure(a):
     plt.title("Scatter Plot: Age vs. Resting Blood Pressure")
     plt.grid(True)
     # plt.legend()
-    #plt.show()
+    # plt.show()
 
     plt.savefig("output/scatter.png", format="png")
     plt.close()
 
 
-if __name__ == "__main__":
-    output_dir = "output"
-    os.makedirs(output_dir, exist_ok=True)
-    readfile("heart.csv")
-    summary("heart.csv").to_html("output/describe_results.html", index=False)
-    histogram("heart.csv")
-    scatter_age_blood_pressure("heart.csv")
+# make output directory to save html and png
+def create_output_directory(directory="output"):
+    """Create an output directory if it doesn't exist."""
+    os.makedirs(directory, exist_ok=True)
+
+
+# if __name__ == "__main__":
+# create_output_directory()
+# summary("heart.csv")
+# median("heart.csv")
+# histogram("heart.csv")
+# scatter_age_blood_pressure("heart.csv")

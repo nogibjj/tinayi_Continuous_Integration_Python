@@ -35,11 +35,11 @@ This project creates a Python script using Pandas for descriptive statistics. Th
 
 + Create `lib.py` file
   
-  + Shares the common code between the script and notebook
-
-+ Create a Jupyter Notebook
-
   + Read a dataset (CSV) using `Pandas`
+
++ Create a Jupyter Notebook `script.ipynb`
+
+  + import `readfile` function from `lib.py`
 
   + Generate summary statistics (mean, median, standard deviation)
 
@@ -49,9 +49,17 @@ This project creates a Python script using Pandas for descriptive statistics. Th
   
   + Using nbval plugin for `pytest`
     
-+ Create a Phython script
++ Create a Phython script `script.py`
   
-  + Perform the same descriptive statistics that are included in the Jupyer Notebook using `Pandas`
+  + import `readfile` function from `lib.py`
+
+  + Generate summary statistics (mean, median, standard deviation)
+
+  + Create data visualizations
+
+  + Save summary statistics as `html` file into `output` folder
+
+  + Save the data visualizations as image into `output` folder
 
 + Create a `test_script.py` file 
   
@@ -65,15 +73,30 @@ This project creates a Python script using Pandas for descriptive statistics. Th
   
 ### Description
 
-Step 1: In the requirements.txt, I added pandas 2.1.0 and matplotlib==3.7.2. 
+Step 1: In the `requirements.txt`, I added `pandas`, `matplotlib`, and `nbval`. 
 
-<img width="914" alt="Screen Shot 2023-09-11 at 12 56 29 AM" src="https://github.com/nogibjj/tinayi_week2_mini_project/assets/143360909/29707693-8415-4eeb-b754-53140f1bbf54">
+<img width="695" alt="Screen Shot 2023-09-16 at 5 53 43 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/2af4dcd0-70fa-41b8-8c40-f5732d5c3d88">
 
+Step 2: In the `Makefile`, I include the following:
+       
+       + install all the requirements
 
-Step 2: In the main.py, I created a Python Script. It includes 
+       + test Jupyter Notebook and script and lib
+
+       + Formats code with Python black
+       
+       + Lints code with Ruff
+
+<img width="659" alt="Screen Shot 2023-09-16 at 6 05 06 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/5a9dabfe-6c4c-4ebc-be67-cf31a700e1b1">
+
+Step 3: In the `lib.py` under the mylib folder, I include:
 
        + a `readfile` function, which reads a CSV file.
+
+Step 4: In the `script.ipynb`, I create a scrapbook for my Python Script. It includes:
        
+       + import `readfile` function from `lib.py`
+
        + a 'summary' function which generates summary statistics for the numeric columns in the DataFrame heart.csv.
 
        + a 'median' function which calculate the median value for each column in heart.csv
@@ -82,16 +105,27 @@ Step 2: In the main.py, I created a Python Script. It includes
 
        + a 'scatter_age_blood_pressure' function which generate scatter plot with fitted line for the 4th column (resting blood pressure) and the 1st column (age) in heart.csv
 
-<img width="905" alt="Screen Shot 2023-09-11 at 12 57 11 AM" src="https://github.com/nogibjj/tinayi_week2_mini_project/assets/143360909/0bc88d4b-3872-4527-a362-ce270f592a33">
+Step 5: In the `script.py`, I created a Python Script. It includes: 
+       
+       + import `readfile` function from `lib.py`
 
-<img width="798" alt="Screen Shot 2023-09-11 at 12 57 40 AM" src="https://github.com/nogibjj/tinayi_week2_mini_project/assets/143360909/17b904d4-5058-406a-8cff-925a905facff">
+       + a 'summary' function which generates summary statistics for the numeric columns in the DataFrame heart.csv. It is saved as a `html` file in my output folder.
 
-<img width="892" alt="Screen Shot 2023-09-11 at 9 30 08 AM" src="https://github.com/nogibjj/tinayi_week2_mini_project/assets/143360909/3edff112-b69d-4238-a769-cf5b36039231">
+       + a 'median' function which calculate the median value for each column in heart.csv. It is saved as a `html` file in my output folder.
 
+       + a 'histogram' function which generate histogram for each column in heart.csv. It is saved as a series of graphs in the `png` form in my output folder.
 
-Step 3: In the `test_main.py`, I wrote five test functions `test_readfile`, `test_summary`, `test_median`, `test_histogram`,`test_scatter_age_blood_pressure`, which checks the summary statistics and data visualizations of `heart.csv`.
+       + a 'scatter_age_blood_pressure' function which generate scatter plot with fitted line for the 4th column (resting blood pressure) and the 1st column (age) in heart.csv. It is saved in the `png` form in my output folder.
 
-       + check file 
+       + a `create_output_directory` function which generates output directory to save `html` and `png`
+
+Step 7: In the `test_lib.py`, I wrote a test function `test_readfile` which checks the function in `lib.py` 
+
+       + verify that the `readfile` function successfully reads the CSV file specified by file_path and returns a non-empty Pandas DataFrame.
+
+Step 8: In the `test_script.py`, I wrote five test functions `test_output_directory_exists`, `test_summary`, `test_median`, `test_histogram`,`test_scatter_age_blood_pressure`, which checks the output folder, the summary statistics and data visualizations of `heart.csv`.
+
+       + check the output directory exists
 
        + check the mean value of the fourth column (resting blood pressure)
        
@@ -103,12 +137,7 @@ Step 3: In the `test_main.py`, I wrote five test functions `test_readfile`, `tes
 
        + check scatter plot for age and resting blood pressure
 
-<img width="869" alt="Screen Shot 2023-09-11 at 10 01 41 AM" src="https://github.com/nogibjj/tinayi_week2_mini_project/assets/143360909/af2210b8-8a18-4803-9e63-9ba0880f26ed">
-
-<img width="886" alt="Screen Shot 2023-09-11 at 10 02 07 AM" src="https://github.com/nogibjj/tinayi_week2_mini_project/assets/143360909/91e65d46-9e3d-4e41-b952-96b42f83e48e">
-
-
-Step 4: I generated Data Visualizations
+Step 9: I generated Data Visualizations
 
 + summary statistics
 
@@ -161,14 +190,14 @@ Step 5: I generated the summary report (PDF) from Jupyter Notebook
 
 + install code `make install`
   
-<img width="1067" alt="Screen Shot 2023-09-08 at 4 53 59 PM" src="https://github.com/nogibjj/tinayi_week2_mini_project/assets/143360909/84203fec-f516-4f85-8cd2-0b0e2eaced38">
+<img width="1033" alt="Screen Shot 2023-09-16 at 5 28 02 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/190bdd58-e7e7-46e6-bcbc-ef0341884c95">
 
 + lint code `make lint`
 + format code `make format`
 + test code `make test`
 
-<img width="989" alt="Screen Shot 2023-09-11 at 9 58 19 AM" src="https://github.com/nogibjj/tinayi_week2_mini_project/assets/143360909/28c1051c-fa8c-4c4b-b790-b6ce4b5cabdf">
+<img width="1023" alt="Screen Shot 2023-09-16 at 6 46 49 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/3b218acf-5a3e-4577-89b7-e3b75556596b">
 
 + code `make all` executes install, lint, format, and test targets
 
-<img width="985" alt="Screen Shot 2023-09-11 at 9 58 46 AM" src="https://github.com/nogibjj/tinayi_week2_mini_project/assets/143360909/40862bf0-0204-4217-82b6-460cdeff4b87">
+<img width="1020" alt="Screen Shot 2023-09-16 at 6 47 15 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/773f9d6f-6fe2-46a8-872d-9b9f47c1fd94">
