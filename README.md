@@ -109,19 +109,27 @@ Step 5: In the `script.py`, I created a Python Script. It includes:
        
        + import `readfile` function from `lib.py`
 
-       + a 'summary' function which generates summary statistics for the numeric columns in the DataFrame heart.csv. It is saved as a `html` file in my output folder.
+       + a 'summary' function which generates summary statistics for the numeric columns in the DataFrame heart.csv. 
+       
+         + It is saved as a `html` file in my output folder.
 
-       + a 'median' function which calculate the median value for each column in heart.csv. It is saved as a `html` file in my output folder.
+       + a 'median' function which calculate the median value for each column in heart.csv. 
+       
+         + It is saved as a `html` file in my output folder.
 
-       + a 'histogram' function which generate histogram for each column in heart.csv. It is saved as a series of graphs in the `png` form in my output folder.
+       + a 'histogram' function which generate histogram for each column in heart.csv. 
+       
+         + It is saved as a series of graphs in the `png` form in my output folder.
 
-       + a 'scatter_age_blood_pressure' function which generate scatter plot with fitted line for the 4th column (resting blood pressure) and the 1st column (age) in heart.csv. It is saved in the `png` form in my output folder.
+       + a 'scatter_age_blood_pressure' function which generate scatter plot with fitted line for the 4th column (resting blood pressure) and the 1st column (age) in heart.csv. 
+       
+         + It is saved in the `png` form in my output folder.
 
        + a `create_output_directory` function which generates output directory to save `html` and `png`
 
 Step 7: In the `test_lib.py`, I wrote a test function `test_readfile` which checks the function in `lib.py` 
 
-       + verify that the `readfile` function successfully reads the CSV file specified by file_path and returns a non-empty Pandas DataFrame.
+       + check that the `readfile` function successfully reads the CSV file specified by file_path and returns a non-empty Pandas DataFrame.
 
 Step 8: In the `test_script.py`, I wrote five test functions `test_output_directory_exists`, `test_summary`, `test_median`, `test_histogram`,`test_scatter_age_blood_pressure`, which checks the output folder, the summary statistics and data visualizations of `heart.csv`.
 
