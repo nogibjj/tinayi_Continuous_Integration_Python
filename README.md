@@ -1,10 +1,10 @@
 [![CI](https://github.com/nogibjj/tinayi_week2_mini_project/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/tinayi_week2_mini_project/actions/workflows/cicd.yml)
 
-## Pandas Descriptive Statistics Script
+## Continuous Integration using GitHub Actions of Python Data Science Project
 
-IDS 706 Mini-Project 2
+IDS 706 Individual Project 1
 
-Pandas Descriptive Statistics Script
+Continuous Integration using GitHub Actions of Python Data Science Project
 
 ### Goal
 
@@ -14,7 +14,7 @@ Pandas Descriptive Statistics Script
 
 + create summary report using `Jupyter Notebook`
 
-The workflow includes running a Makefile to perform tasks such as installation (`make install`), testing (`make test`), code formatting (`make format`), linting (`make lint`), and an all-inclusive task (`make all`). This automation streamlines the data analysis process and enhances code quality.
+The workflow includes running a Makefile to perform tasks such as installation (`make install`), testing (`make test`), code formatting (`make format`) with Python Black, linting (`make lint`) with Ruff, and an all-inclusive task (`make all`). This automation streamlines the data analysis process and enhances code quality.
 
 ### Preperation
 
@@ -33,15 +33,35 @@ The workflow includes running a Makefile to perform tasks such as installation (
 
 This project creates a Python script using Pandas for descriptive statistics. The specific steps involve: 
 
-+ Create a Phython script
++ Create lib.py file
+  
+  + Shares the common code between the script and notebook
 
-  + Read a dataset (CSV)
++ Create a Jupyter Notebook
+
+  + Read a dataset (CSV) using `Pandas`
 
   + Generate summary statistics (mean, median, standard deviation)
 
   + Create data visualizations
 
-+ Generate summary report (PDF)
++ Create a test for Jupyter Notebook
+  
+  + Using nbval plugin for pytest
+    
++ Create a Phython script
+  
+  + Perform the same descriptive statistics that are included in the Jupyer Notebook using `Pandas`
+
++ Create a test_script.py file 
+  
+  + Test Python script
+
++ Create a test_lib.py file 
+  
+  + Test library
+
++ Generate a summary report (PDF)
   
 ### Description
 
