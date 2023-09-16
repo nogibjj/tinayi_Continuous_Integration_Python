@@ -33,7 +33,7 @@ The workflow includes running a Makefile to perform tasks such as installation (
 
 This project creates a Python script using Pandas for descriptive statistics. The specific steps involve: 
 
-+ Create lib.py file
++ Create `lib.py` file
   
   + Shares the common code between the script and notebook
 
@@ -47,17 +47,17 @@ This project creates a Python script using Pandas for descriptive statistics. Th
 
 + Create a test for Jupyter Notebook
   
-  + Using nbval plugin for pytest
+  + Using nbval plugin for `pytest`
     
 + Create a Phython script
   
   + Perform the same descriptive statistics that are included in the Jupyer Notebook using `Pandas`
 
-+ Create a test_script.py file 
++ Create a `test_script.py` file 
   
   + Test Python script
 
-+ Create a test_lib.py file 
++ Create a `test_lib.py` file 
   
   + Test library
 
