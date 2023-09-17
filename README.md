@@ -73,9 +73,9 @@ This project creates a Python script using Pandas for descriptive statistics. Th
   
 ### Description
 
-Step 1: In the `requirements.txt`, I added `pandas`, `matplotlib`, and `nbval`. 
+Step 1: In the `requirements.txt`, I added function `pandas`, `matplotlib`, and `nbval`. 
 
-<img width="695" alt="Screen Shot 2023-09-16 at 5 53 43 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/2af4dcd0-70fa-41b8-8c40-f5732d5c3d88">
+<img width="699" alt="Screen Shot 2023-09-16 at 7 11 43 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/9e170781-a1f9-47a3-b102-44d862436955">
 
 Step 2: In the `Makefile`, I include the following:
        
