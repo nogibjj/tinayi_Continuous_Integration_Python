@@ -15,4 +15,8 @@ COPY requirements.txt /tmp/
 COPY Makefile /tmp/
 RUN su $USER -c "/usr/bin/python3 -m venv /home/${USER}/venv" \
    && su $USER -c "${VENV_PATH}/bin/pip --disable-pip-version-check --no-cache-dir install -r /tmp/requirements.txt" \
+<<<<<<< HEAD
    && rm -rf /tmp/requirements.txt 
+=======
+   && rm -rf /tmp/requirements.txt 
+>>>>>>> 1fa398e6095bc2f6fd6d3421f37daa59c3ceba27
