@@ -99,23 +99,23 @@ Step 4: In the `script.ipynb`, I create a scrapbook for my Python Script. It inc
        
        + import `readfile` function from `lib.py`
 
-       <img width="841" alt="Screen Shot 2023-09-16 at 9 46 57 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/75f6b195-d9f2-4904-8c9b-a85aa2b22bcb">
+<img width="841" alt="Screen Shot 2023-09-16 at 9 46 57 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/75f6b195-d9f2-4904-8c9b-a85aa2b22bcb">
 
        + a 'summary' function which generates summary statistics for the numeric columns in the DataFrame heart.csv.
 
-       <img width="1120" alt="Screen Shot 2023-09-16 at 9 47 58 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/620ca963-f852-4166-bedc-6699f3dbf2d3">
+<img width="1120" alt="Screen Shot 2023-09-16 at 9 47 58 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/620ca963-f852-4166-bedc-6699f3dbf2d3">
 
        + a 'median' function which calculate the median value for each column in heart.csv
 
-       <img width="1023" alt="Screen Shot 2023-09-16 at 9 48 32 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/2d5f9d4e-bbc8-4e1a-b65c-2fbb6d453521">
+<img width="1023" alt="Screen Shot 2023-09-16 at 9 48 32 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/2d5f9d4e-bbc8-4e1a-b65c-2fbb6d453521">
 
        + a 'histogram' function which generate histogram for each column in heart.csv
 
-       <img width="1044" alt="Screen Shot 2023-09-16 at 9 49 05 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/dc5c194e-8641-44d1-a4ab-7591f9c27b24">
+<img width="1044" alt="Screen Shot 2023-09-16 at 9 49 05 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/dc5c194e-8641-44d1-a4ab-7591f9c27b24">
 
        + a 'scatter_age_blood_pressure' function which generate scatter plot with fitted line for the 4th column (resting blood pressure) and the 1st column (age) in heart.csv
 
-       <img width="914" alt="Screen Shot 2023-09-16 at 9 52 05 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/444064eb-211b-43cb-82b6-e85d6db51c97">
+<img width="914" alt="Screen Shot 2023-09-16 at 9 52 05 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/444064eb-211b-43cb-82b6-e85d6db51c97">
 
 Step 5: In the `script.py`, I created a Python Script. It includes: 
        
@@ -139,18 +139,18 @@ Step 5: In the `script.py`, I created a Python Script. It includes:
 
        + a `create_output_directory` function which generates output directory to save `html` and `png`
 
-       <img width="909" alt="Screen Shot 2023-09-16 at 9 53 22 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/6cffd478-5ebf-4895-b238-354ab66dcce3">
+<img width="909" alt="Screen Shot 2023-09-16 at 9 53 22 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/6cffd478-5ebf-4895-b238-354ab66dcce3">
        
-       <img width="922" alt="Screen Shot 2023-09-16 at 9 54 19 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/7c6b3fa2-3875-467d-8b1d-6a54e520f127">
+<img width="922" alt="Screen Shot 2023-09-16 at 9 54 19 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/7c6b3fa2-3875-467d-8b1d-6a54e520f127">
        
-       <img width="830" alt="Screen Shot 2023-09-16 at 9 55 04 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/53719450-1e81-4b20-b892-9793e4651cb7">
+<img width="830" alt="Screen Shot 2023-09-16 at 9 55 04 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/53719450-1e81-4b20-b892-9793e4651cb7">
 
 
 Step 7: In the `test_lib.py`, I wrote a test function `test_readfile` which checks the function in `lib.py` 
 
        + check that the `readfile` function successfully reads the CSV file specified by file_path and returns a non-empty Pandas DataFrame.
 
-       <img width="737" alt="Screen Shot 2023-09-16 at 9 57 16 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/326cf62b-0e5c-4165-a58a-15d88c061dde">
+<img width="737" alt="Screen Shot 2023-09-16 at 9 57 16 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/326cf62b-0e5c-4165-a58a-15d88c061dde">
 
 
 Step 8: In the `test_script.py`, I wrote five test functions `test_output_directory_exists`, `test_summary`, `test_median`, `test_histogram`,`test_scatter_age_blood_pressure`, which checks the output folder, the summary statistics and data visualizations of `heart.csv`.
@@ -167,11 +167,11 @@ Step 8: In the `test_script.py`, I wrote five test functions `test_output_direct
 
        + check scatter plot for age and resting blood pressure
 
-       <img width="938" alt="Screen Shot 2023-09-16 at 9 59 38 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/2db28f06-cc34-4d45-9424-4a830b9411f2">
+<img width="938" alt="Screen Shot 2023-09-16 at 9 59 38 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/2db28f06-cc34-4d45-9424-4a830b9411f2">
        
-       <img width="921" alt="Screen Shot 2023-09-16 at 10 00 00 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/bfdc270f-8f2b-41ae-8730-d1b64f28153a">
+<img width="921" alt="Screen Shot 2023-09-16 at 10 00 00 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/bfdc270f-8f2b-41ae-8730-d1b64f28153a">
        
-       <img width="337" alt="Screen Shot 2023-09-16 at 10 00 29 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/5675479b-b965-426b-9b8e-2992cb72f7a5">
+<img width="337" alt="Screen Shot 2023-09-16 at 10 00 29 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/5675479b-b965-426b-9b8e-2992cb72f7a5">
 
 
 Step 9: I generated Data Visualizations
