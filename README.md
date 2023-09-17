@@ -221,7 +221,7 @@ Step 9: I generated Data Visualizations
 
 Step 5: I generated the summary report (PDF) from Jupyter Notebook
 
-#### [Summary Report PDF](Summary-Report.pdf)
+#### [Summary Report PDF](./Summary-Report.pdf)
 
 ### Check Format and Test Approval Image
 
