@@ -1,6 +1,6 @@
 [![OnInstall](https://github.com/nogibjj/tinayi_individual_project1/actions/workflows/install.yml/badge.svg)](https://github.com/nogibjj/tinayi_individual_project1/actions/workflows/install.yml)
 
-
+[![Lint](https://github.com/nogibjj/tinayi_individual_project1/actions/workflows/lint.yml/badge.svg)](https://github.com/nogibjj/tinayi_individual_project1/actions/workflows/lint.yml)
 
 [![Format](https://github.com/nogibjj/tinayi_individual_project1/actions/workflows/format.yml/badge.svg)](https://github.com/nogibjj/tinayi_individual_project1/actions/workflows/format.yml)
 
