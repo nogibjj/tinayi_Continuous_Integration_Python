@@ -1,4 +1,5 @@
-[![CI](https://github.com/nogibjj/tinayi_week2_mini_project/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/tinayi_week2_mini_project/actions/workflows/cicd.yml)
+[![Format](https://github.com/nogibjj/tinayi_individual_project1/actions/workflows/format.yml/badge.svg)](https://github.com/nogibjj/tinayi_individual_project1/actions/workflows/format.yml)
+
 
 ## Continuous Integration using GitHub Actions of Python Data Science Project
 
