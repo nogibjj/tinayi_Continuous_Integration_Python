@@ -87,24 +87,22 @@ def save_to_markdown(csv):
         file.write("\n\n")  # Add a new line
         file.write(markdown_table2)
         file.write("\n\n")  # Add a new line
-
+        directory = "output"
         # Generate plots and add them to the report for each item in plots
-        for plot in plots:
-            if plot["type"] == "histogram":
-                feature = plot["feature"]
-                histogram_filename = f"{output_dir}/histogram_{feature}.png"
-                generate_histogram(csv, feature, histogram_filename)
-
-                file.write(f"### Histogram of {feature}\n")
-                file.write(f"![histogram_{feature}]({histogram_filename})\n")
+        i  = 0
+        for plot in os.listdir(directory):
+            f = os.path.join(directory, plot)
+            if "histogram" in f:
+                file.write(f"![histogram_{i}]"({f})\n")
                 file.write("\n\n")  # Add a new line
-            elif plot["type"] == "scatterplot":
-                scatterplot_filename = f"{output_dir}/scatterplot.png"
-                generate_scatterplot(csv, scatterplot_filename)
+            # elif plot["type"] == "scatterplot":
+            #     scatterplot_filename = f"{output_dir}/scatterplot.png"
+            #     generate_scatterplot(csv, scatterplot_filename)
 
-                file.write("### Scatterplot of Age vs. Resting Blood Pressure\n")
-                file.write(f"![scatterplot](output/scatter_age_VS_resting_blood_pressure.png)\n")
-                file.write("\n\n")  # Add a new line
+            #     file.write("### Scatterplot of Age vs. Resting Blood Pressure\n")
+            #     file.write(f"![scatterplot](output/scatter_age_VS_resting_blood_pressure.png)\n")
+            #     file.write("\n\n")  # Add a new line
+            i += 1
 
 # if __name__ == "__main__":
 # create_output_directory()
