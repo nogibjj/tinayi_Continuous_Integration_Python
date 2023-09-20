@@ -73,6 +73,18 @@ def create_output_directory(directory="output"):
     """Create an output directory if it doesn't exist."""
     os.makedirs(directory, exist_ok=True)
 
+def save_to_markdown(csv):
+    """save summary report to markdown"""
+    describe_df = summary(csv)
+    markdown_table1 = describe_df.to_markdown()
+    # Write the markdown table to a file
+    with open("heart_summary.md", "w", encoding="utf-8") as file:
+        file.write("Describe:\n")
+        file.write(markdown_table1)
+        file.write("\n\n")  # Add a new line
+        file.write("![histogram_age](output/histogram_age.png)\n")
+        file.write("\n\n")  # Add a new line
+        file.write("![scatterplot](output/scatter_age_VS_resting_blood_pressure.png)\n")
 
 # if __name__ == "__main__":
 # create_output_directory()
