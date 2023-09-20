@@ -227,7 +227,7 @@ Step 5: I generated the summary report (PDF) from Jupyter Notebook
 
 #### [Summary Report PDF](./Summary-Report.pdf)
 
-### Check Format and Test Approval Image
+### Check Format and Test Approval Images
 
 + install code `make install`
   
