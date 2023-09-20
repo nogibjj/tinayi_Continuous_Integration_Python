@@ -93,7 +93,7 @@ def save_to_markdown(csv):
         for plot in os.listdir(directory):
             f = os.path.join(directory, plot)
             if "histogram" in f:
-                file.write(f"![histogram_{i}]"({f})\n")
+                file.write(f"![histogram_{i}]({f})\n")
                 file.write("\n\n")  # Add a new line
             # elif plot["type"] == "scatterplot":
             #     scatterplot_filename = f"{output_dir}/scatterplot.png"
