@@ -14,11 +14,7 @@ Continuous Integration using GitHub Actions of Python Data Science Project
 
 ### Goal
 
-+ establish a CodeSpaces environment that automates the process of loading a dataset using `Pandas` and executing a `readfile` function to generate descriptive statistics on the dataset, utilizing GitHub Actions. 
-  
-+ create data visualizations of the dataset using `matplotlib`
-
-+ create summary report using `Jupyter Notebook`
++ establish a CodeSpaces environment that automates the process of loading a dataset, generating descriptive statistics on the dataset, and creating data visualizations of the dataset using `Pandas` and `matplotlib`, utilizing GitHub Actions. 
 
 The workflow includes running a Makefile to perform tasks such as installation (`make install`), testing (`make test`), code formatting (`make format`) with Python Black, linting (`make lint`) with Ruff, and an all-inclusive task (`make all`). This automation streamlines the data analysis process and enhances code quality.
 
