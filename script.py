@@ -95,8 +95,8 @@ def save_to_markdown(csv):
             if "histogram" in f:
                 file.write(f"![histogram_{i}]({f})\n")
                 file.write("\n\n")  # Add a new line
-            elif plot["type"] == "scatterplot":
-                file.write(f"![scatterplot](output/scatter_age_VS_resting_blood_pressure.png)\n")
+            elif "scatterplot" in f:
+                file.write(f"![scatterplot_{i}]({f})\n")
                 file.write("\n\n")  # Add a new line
             i += 1
 
