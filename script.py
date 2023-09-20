@@ -77,14 +77,34 @@ def save_to_markdown(csv):
     """save summary report to markdown"""
     describe_df = summary(csv)
     markdown_table1 = describe_df.to_markdown()
-    # Write the markdown table to a file
+    mean_df=median(csv)
+    markdown_table2 = mean_df.to_markdown()
+
+    # Write the markdown report to a file
     with open("heart_summary.md", "w", encoding="utf-8") as file:
-        file.write("Describe:\n")
+        file.write("## Describe:\n")
         file.write(markdown_table1)
         file.write("\n\n")  # Add a new line
-        file.write("![histogram_age](output/histogram_age.png)\n")
+        file.write(markdown_table2)
         file.write("\n\n")  # Add a new line
-        file.write("![scatterplot](output/scatter_age_VS_resting_blood_pressure.png)\n")
+
+        # Generate plots and add them to the report for each item in plots
+        for plot in plots:
+            if plot["type"] == "histogram":
+                feature = plot["feature"]
+                histogram_filename = f"{output_dir}/histogram_{feature}.png"
+                generate_histogram(csv, feature, histogram_filename)
+
+                file.write(f"### Histogram of {feature}\n")
+                file.write(f"![histogram_{feature}]({histogram_filename})\n")
+                file.write("\n\n")  # Add a new line
+            elif plot["type"] == "scatterplot":
+                scatterplot_filename = f"{output_dir}/scatterplot.png"
+                generate_scatterplot(csv, scatterplot_filename)
+
+                file.write("### Scatterplot of Age vs. Resting Blood Pressure\n")
+                file.write(f"![scatterplot](output/scatter_age_VS_resting_blood_pressure.png)\n")
+                file.write("\n\n")  # Add a new line
 
 # if __name__ == "__main__":
 # create_output_directory()
