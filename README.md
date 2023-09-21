@@ -133,6 +133,8 @@ Step 2: In the `Makefile`, I include the following:
        
 <img width="659" alt="Screen Shot 2023-09-16 at 6 05 06 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/5a9dabfe-6c4c-4ebc-be67-cf31a700e1b1">
 
+<img width="677" alt="Screen Shot 2023-09-20 at 10 23 37 PM" src="https://github.com/nogibjj/tinayi_Continuous_Integration_Python/assets/143360909/17648602-bd11-4eab-851e-92f120e61c53">
+
 All of these are later run in the four `yml` files in Github Actions
 
 Step 3: In the `lib.py` under the mylib folder, I include:
@@ -193,6 +195,7 @@ Step 5: In the `script.py`, I created a Python Script. It includes:
        
 <img width="830" alt="Screen Shot 2023-09-16 at 9 55 04 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/53719450-1e81-4b20-b892-9793e4651cb7">
 
+<img width="650" alt="Screen Shot 2023-09-20 at 10 33 27 PM" src="https://github.com/nogibjj/tinayi_Continuous_Integration_Python/assets/143360909/294a7906-b2c6-4d34-b3dd-6b2a003a907c">
 
 Step 7: In the `test_lib.py`, I wrote a test function `test_readfile` which checks the function in `lib.py` 
 
@@ -201,7 +204,7 @@ Step 7: In the `test_lib.py`, I wrote a test function `test_readfile` which chec
 <img width="737" alt="Screen Shot 2023-09-16 at 9 57 16 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/326cf62b-0e5c-4165-a58a-15d88c061dde">
 
 
-Step 8: In the `test_script.py`, I wrote six test functions `test_output_directory_exists`, `test_summary`, `test_median`, `test_histogram`,`test_scatter_age_blood_pressure`, `test_save_to_mark_down` which checks the output folder, the summary statistics and data visualizations of `heart.csv`.
+Step 8: In the `test_script.py`, I wrote six test functions `test_output_directory_exists`, `test_summary`, `test_median`, `test_histogram`,`test_scatter_age_blood_pressure`, `test_save_to_mark_down` which checks the output folder and the markdown file for the summary statistics and data visualizations of `heart.csv`.
 
        + check the output directory exists
 
@@ -221,10 +224,9 @@ Step 8: In the `test_script.py`, I wrote six test functions `test_output_directo
        
 <img width="921" alt="Screen Shot 2023-09-16 at 10 00 00 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/bfdc270f-8f2b-41ae-8730-d1b64f28153a">
        
-<img width="337" alt="Screen Shot 2023-09-16 at 10 00 29 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/5675479b-b965-426b-9b8e-2992cb72f7a5">
+<img width="346" alt="Screen Shot 2023-09-20 at 10 35 31 PM" src="https://github.com/nogibjj/tinayi_Continuous_Integration_Python/assets/143360909/fa47c7fe-022d-49b5-8052-5d4b7a9a64d4">
 
-
-Step 9: I generated Data Visualizations
+Step 9: I generated Data Visualizations in the output folder and the Summary Report in markdown file 
 
 + summary statistics
 
