@@ -195,7 +195,7 @@ Step 5: In the `script.py`, I created a Python Script. It includes:
        
 <img width="830" alt="Screen Shot 2023-09-16 at 9 55 04 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/53719450-1e81-4b20-b892-9793e4651cb7">
 
-<img width="650" alt="Screen Shot 2023-09-20 at 10 33 27 PM" src="https://github.com/nogibjj/tinayi_Continuous_Integration_Python/assets/143360909/294a7906-b2c6-4d34-b3dd-6b2a003a907c">
+<img width="707" alt="Screen Shot 2023-09-20 at 11 23 24 PM" src="https://github.com/nogibjj/tinayi_Continuous_Integration_Python/assets/143360909/3b8dbd38-a95f-4cda-a8a4-80c12abae73f">
 
 Step 7: In the `test_lib.py`, I wrote a test function `test_readfile` which checks the function in `lib.py` 
 
