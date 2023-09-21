@@ -28,6 +28,7 @@
 | thall    |   2   |
 | output   |   1   |
 
+## Histograms and Scatter Plot: 
 ![histogram_0](output/histogram_cp.png)
 
 
