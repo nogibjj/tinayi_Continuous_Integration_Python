@@ -28,7 +28,8 @@
 | thall    |   2   |
 | output   |   1   |
 
-## Histograms and Scatter Plot: 
+## Histogram and Scatter Plots: 
+![scatterplot](output/scatter_age_VS_resting_blood_pressure.png)
 ![histogram_0](output/histogram_cp.png)
 
 
