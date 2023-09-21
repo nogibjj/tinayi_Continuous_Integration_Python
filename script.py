@@ -88,9 +88,9 @@ def save_to_markdown(csv):
         file.write("## Median:\n")
         file.write(markdown_table2)
         file.write("\n\n")  # Add a new line
+        directory = "output"
         file.write("## Histogram and Scatter Plots: \n")
         file.write("![scatterplot](scatter.png)\n")
-        directory = "output"
         # Generate plots and add them to the report for each item in plots
         i  = 0
         for plot in os.listdir(directory):
