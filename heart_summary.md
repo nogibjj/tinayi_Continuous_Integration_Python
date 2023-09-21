@@ -1,4 +1,4 @@
-## Describe:
+## Summary Statistics:
 |       |      age |        sex |         cp |   trtbps |     chol |        fbs |    restecg |   thalachh |       exng |   oldpeak |        slp |        caa |      thall |     output |
 |:------|---------:|-----------:|-----------:|---------:|---------:|-----------:|-----------:|-----------:|-----------:|----------:|-----------:|-----------:|-----------:|-----------:|
 | count | 303      | 303        | 303        | 303      | 303      | 303        | 303        |   303      | 303        | 303       | 303        | 303        | 303        | 303        |
@@ -28,6 +28,8 @@
 | thall    |   2   |
 | output   |   1   |
 
+## Histogram and Scatter Plots: 
+![scatterplot](output/scatter_age_VS_resting_blood_pressure.png)
 ![histogram_0](output/histogram_cp.png)
 
 
