@@ -73,11 +73,12 @@ def create_output_directory(directory="output"):
     """Create an output directory if it doesn't exist."""
     os.makedirs(directory, exist_ok=True)
 
+
 def save_to_markdown(csv):
     """save summary report to markdown"""
     describe_df = summary(csv)
     markdown_table1 = describe_df.to_markdown()
-    mean_df=median(csv)
+    mean_df = median(csv)
     markdown_table2 = mean_df.to_markdown()
 
     # Write the markdown report to a file
@@ -90,15 +91,20 @@ def save_to_markdown(csv):
         file.write("\n\n")  # Add a new line
         directory = "output"
         file.write("## Histograms and Scatter Plot: \n")
-        file.write("![scatterplot](scatter.png)\n")
         # Generate plots and add them to the report for each item in plots
-        i  = 0
+        i = 0
         for plot in os.listdir(directory):
             f = os.path.join(directory, plot)
             if "histogram" in f:
+                # print(f)
                 file.write(f"![histogram_{i}]({f})\n")
                 file.write("\n\n")  # Add a new line
+            elif "output/scatter.png" == f:
+                # print(f)
+                file.write(f"![scatter_{i}]({f})\n")
+
             i += 1
+
 
 # if __name__ == "__main__":
 # create_output_directory()

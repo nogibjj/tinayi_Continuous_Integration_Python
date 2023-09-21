@@ -9,7 +9,7 @@ from script import (
     histogram,
     scatter_age_blood_pressure,
     create_output_directory,
-    save_to_markdown
+    save_to_markdown,
 )
 
 # test cases
@@ -50,6 +50,7 @@ def test_histogram():
 
 def test_scatter_age_blood_pressure():
     scatter_age_blood_pressure("heart.csv")
+
 
 def test_save_to_markdown():
     save_to_markdown("heart.csv")
