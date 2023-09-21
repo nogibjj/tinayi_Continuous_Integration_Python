@@ -86,7 +86,7 @@ def save_to_markdown(csv):
         file.write("## Summary Statistics:\n")
         file.write(markdown_table1)
         file.write("\n\n")  # Add a new line
-        file.write("## Median:\n")
+        file.write("## Median Statistics:\n")
         file.write(markdown_table2)
         file.write("\n\n")  # Add a new line
         directory = "output"
