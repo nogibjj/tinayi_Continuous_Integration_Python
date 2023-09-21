@@ -83,7 +83,7 @@ def save_to_markdown(csv):
 
     # Write the markdown report to a file
     with open("heart_summary.md", "w", encoding="utf-8") as file:
-        file.write("## Summary Statistics:\n")
+        file.write("## Descriptive Summary Statistics:\n")
         file.write(markdown_table1)
         file.write("\n\n")  # Add a new line
         file.write("## Median Statistics:\n")
