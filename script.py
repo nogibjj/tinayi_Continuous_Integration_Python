@@ -90,6 +90,7 @@ def save_to_markdown(csv):
         file.write("\n\n")  # Add a new line
         directory = "output"
         # Generate plots and add them to the report for each item in plots
+        file.write("## Histograms and Scatter Plot: \n")
         i  = 0
         for plot in os.listdir(directory):
             f = os.path.join(directory, plot)
