@@ -88,17 +88,15 @@ def save_to_markdown(csv):
         file.write("## Median:\n")
         file.write(markdown_table2)
         file.write("\n\n")  # Add a new line
+        file.write("## Histogram and Scatter Plots: \n")
+        file.write("![scatterplot](output/scatter_age_VS_resting_blood_pressure.png)\n")
         directory = "output"
         # Generate plots and add them to the report for each item in plots
-        file.write("## Histograms and Scatter Plot: \n")
         i  = 0
         for plot in os.listdir(directory):
             f = os.path.join(directory, plot)
             if "histogram" in f:
                 file.write(f"![histogram_{i}]({f})\n")
-                file.write("\n\n")  # Add a new line
-            elif "scatterplot" in f:
-                file.write(f"![scatterplot_{i}]({f})\n")
                 file.write("\n\n")  # Add a new line
             i += 1
 
