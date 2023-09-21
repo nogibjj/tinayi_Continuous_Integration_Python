@@ -29,7 +29,7 @@
 | output   |   1   |
 
 ## Histogram and Scatter Plots: 
-![scatterplot](output/scatter_age_VS_resting_blood_pressure.png)
+![scatterplot](scatter.png)
 ![histogram_0](output/histogram_cp.png)
 
 

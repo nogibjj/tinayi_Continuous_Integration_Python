@@ -89,7 +89,7 @@ def save_to_markdown(csv):
         file.write(markdown_table2)
         file.write("\n\n")  # Add a new line
         file.write("## Histogram and Scatter Plots: \n")
-        file.write("![scatterplot](output/scatter_age_VS_resting_blood_pressure.png)\n")
+        file.write("![scatterplot](scatter.png)\n")
         directory = "output"
         # Generate plots and add them to the report for each item in plots
         i  = 0

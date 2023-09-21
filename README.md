@@ -12,6 +12,8 @@ IDS 706 Individual Project 1
 
 Continuous Integration using GitHub Actions of Python Data Science Project
 
+Demo Video: https://youtu.be/ZCTx2F_Q30Q
+
 ### Goal
 
 + establish a CodeSpaces environment that automates the process of loading a dataset, generating descriptive statistics on the dataset, and creating data visualizations of the dataset using `Pandas` and `matplotlib`, utilizing GitHub Actions. 
@@ -62,6 +64,8 @@ This project creates a Python script using Pandas for descriptive statistics. Th
   + Save summary statistics as `html` file into `output` folder
 
   + Save the data visualizations as image into `output` folder
+    
+  + Save summary statistics and data visualizations into `markdown` file
 
 + Create a `test_script.py` file 
   
@@ -75,20 +79,58 @@ This project creates a Python script using Pandas for descriptive statistics. Th
   
 ### Description
 
-Step 1: In the `requirements.txt`, I added functions `pandas`, `matplotlib`, and `nbval`. 
+Step 1: In the `requirements.txt`, I pinned the following: 
 
-<img width="699" alt="Screen Shot 2023-09-16 at 7 11 43 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/9e170781-a1f9-47a3-b102-44d862436955">
++ #devops
+
++ black==22.3.0
+
++ click==8.1.3 
+
++ pytest==7.1.3
+
++ pytest-cov==4.0.0
+
++ #pylint==2.15.3
+
++ #rust based linter
+
++ ruff==0.0.284
+
++ boto3==1.24.87
+
++ #web
+
++ fastapi==0.85.0
+  
++ uvicorn==0.18.3
+  
++ #func
+  
++ pandas == 2.0.3
+  
++ matplotlib == 3.7.3
+  
++ nbval == 0.10.0
+  
++ jupyter == 1.0.0
+  
++ tabulate == 0.9.0
 
 Step 2: In the `Makefile`, I include the following:
        
-       + install all the requirements
+       + Install all the requirements
 
-       + test Jupyter Notebook and script and lib
+       + Test Jupyter Notebook and script and lib
 
        + Formats code with Python black
        
        + Lints code with Ruff
 
+       + All Inclusive Tasks
+
+       + Generate and Push to Create Output in the Markdown File
+       
 <img width="659" alt="Screen Shot 2023-09-16 at 6 05 06 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/5a9dabfe-6c4c-4ebc-be67-cf31a700e1b1">
 
 All of these are later run in the four `yml` files in Github Actions
@@ -143,6 +185,8 @@ Step 5: In the `script.py`, I created a Python Script. It includes:
 
        + a `create_output_directory` function which generates output directory to save `html` and `png`
 
+       + a `save_to_markdown` function which creates a markdown file that summarizes all of the data summary statistics and visualization for heart.csv
+
 <img width="909" alt="Screen Shot 2023-09-16 at 9 53 22 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/6cffd478-5ebf-4895-b238-354ab66dcce3">
        
 <img width="922" alt="Screen Shot 2023-09-16 at 9 54 19 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/7c6b3fa2-3875-467d-8b1d-6a54e520f127">
@@ -157,7 +201,7 @@ Step 7: In the `test_lib.py`, I wrote a test function `test_readfile` which chec
 <img width="737" alt="Screen Shot 2023-09-16 at 9 57 16 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/326cf62b-0e5c-4165-a58a-15d88c061dde">
 
 
-Step 8: In the `test_script.py`, I wrote five test functions `test_output_directory_exists`, `test_summary`, `test_median`, `test_histogram`,`test_scatter_age_blood_pressure`, which checks the output folder, the summary statistics and data visualizations of `heart.csv`.
+Step 8: In the `test_script.py`, I wrote six test functions `test_output_directory_exists`, `test_summary`, `test_median`, `test_histogram`,`test_scatter_age_blood_pressure`, `test_save_to_mark_down` which checks the output folder, the summary statistics and data visualizations of `heart.csv`.
 
        + check the output directory exists
 
@@ -170,6 +214,8 @@ Step 8: In the `test_script.py`, I wrote five test functions `test_output_direct
        + check histogram for each column
 
        + check scatter plot for age and resting blood pressure
+
+       + check markdown file summary report
 
 <img width="938" alt="Screen Shot 2023-09-16 at 9 59 38 PM" src="https://github.com/nogibjj/tinayi_individual_project1/assets/143360909/2db28f06-cc34-4d45-9424-4a830b9411f2">
        
